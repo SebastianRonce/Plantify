@@ -36,7 +36,8 @@ def buscar_por_codigo(codigo: int):
             return
     print("La planta no se encuentra en la base de datos ")
 
-
+plantas.append(planta(1, "Sabila", "20° a 25°C.", "Una cada 10 o 14 dias.", "Durante 3 minutos.", "20 a 25 Cm.", """ La sabila necesita suelos ricos en materia orgánica
+y con buen drenaje que eviten los encharcamientos. """))
 
 
 def validar_numero(mensaje):
@@ -58,10 +59,9 @@ def validar_riego(mensaje):
     return str(texto)
 
 def inventario(opcion_predeterminada=None):
-    print("buscar, mostrar, salir. ")
-    opcion = opcion_predeterminada
-    if not opcion_predeterminada:
-        opcion = input("Escribe que accion deseas realizar. ").lower()
+    print("Elige una acción. ")
+    print("Buscar, Mostrar, salir. ")
+    opcion = input("Escribe que accion deseas realizar. ").lower()
 
     if opcion == "buscar":
         print("codigo, nombre. ")
